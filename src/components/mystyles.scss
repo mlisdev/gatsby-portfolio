@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+// set brand colors 
+$purple: #763262; 
+$blue: #00225D; 
+$slate: #171635; 
+$orange: #CA7508; 
+$white: #fff; 
+
+// set brand font 
+$sans-serif: "Jost", sans-serif; 
+$family-monospace: "Coda", monospace; 
+$crimson: "Crimson Text", serif; 
+$body-size: 18px; 
+
+// global 
+$family-primary: $sans-serif; 
+$link: $purple; 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $crimson;
+  font-weight: normal;
+}
+$title-size: 3rem; 
+$subtitle-size: 2rem; 
+
+// change default variables 
+// navbar 
+$navbar-item-color: $purple;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: $purple; 
+$navbar-height: 1.5rem; 
+
+// hero 
+$hero-body-padding-medium: 8rem; 
+
+
+@import "~bulma/bulma.sass";
+

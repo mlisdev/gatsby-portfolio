@@ -25,8 +25,16 @@
     "gatsby-source-datocms": "^2.5.7",
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-sharp": "^2.9.0",
+    "phosphor-react": "^1.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-scrollspy": "^3.4.3",
+    "sass": "^1.32.4"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.1",
+    "gatsby-plugin-sass": "^3.0.0",
+    "node-sass": "^5.0.0"
   }
 }
