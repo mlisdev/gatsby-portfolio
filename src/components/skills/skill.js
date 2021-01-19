@@ -10,11 +10,13 @@ const Skill = () => {
   allDatoCmsLibrarySkill(sort: {order: ASC, fields: skill}) {
     nodes {
       skill
+      id
     }
   }
   allDatoCmsSoftwareSkill(sort: {fields: skill, order: ASC}) {
     nodes {
       skill
+      id
     }
   }
 }
@@ -26,12 +28,12 @@ const Skill = () => {
     <section className="mt-6 has-background-light" id="skills">
       <div className="columns is-mobile is-centered">
       <div className="column is-one-quarter">
-          <div class="box">
+          <div className="box">
             <div className="content">
             <h4>Librarian Skills</h4>
       {queryData.allDatoCmsLibrarySkill.nodes.map((skills) => {
         return (
-          <ul>
+          <ul key={skills.id}>
             <li>{skills.skill}</li>
           </ul>
         );
@@ -42,19 +44,19 @@ const Skill = () => {
         </div>
         </div>
         <div className="column is-one-quarter">
-          <div class="box">
-            <p class="content">
+          <div className="box">
+            <div className="content">
             <h4>Software Engineer Skills</h4>
       {queryData.allDatoCmsSoftwareSkill.nodes.map((skills) => {
         return (
-          <ul>
+          <ul key={skills.id}>
             <li>{skills.skill}</li>
           </ul>
         );
       }
       )
               }
-              </p>
+        </div>
         </div>
         </div>
         </div>

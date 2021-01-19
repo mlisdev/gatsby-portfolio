@@ -13,7 +13,7 @@ const About = () => {
           </div>
 
           <div className="column is-half">
-            <p className="content">
+            <div className="content">
               <h3>About... </h3>
               <div className="block">
                 I am a solutions-oriented software engineer, dedicated to problem solving and clean design.
@@ -31,7 +31,7 @@ const About = () => {
                 I believe front end web design should be ADA accessible, crisp, and clear.
                 Back end web development should be secure, easy to navigate, and designed to improve the user experience.
                  </div>
-            </p>
+            </div>
   </div>
         </div>
       </section>
