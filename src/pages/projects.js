@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql} from "gatsby"
 
 
-const Location = () => {
+const Project = () => {
   const queryData = useStaticQuery(
     graphql`
         query MyQuery {
@@ -46,4 +46,4 @@ const Location = () => {
 };
 
 
-export default Location
+export default Project

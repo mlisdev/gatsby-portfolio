@@ -8,9 +8,10 @@ const Hero = () => {
     <section className="hero is-light is-medium">
       <div className="hero-body">
         <div className="container">
-        <img style={{ float: `left`, margin: `0px 25px 25px 0px`}} src={logo} />
-      <h1 class="title">
-          hello, world 🤘🏻
+        <img style={{ float: `left`, margin: `0px 25px 25px 0px`}} src={logo} alt="computer with book pages coming out of the monitor, with a plant and a coffee cup on either side"/>
+          <h1 className="title">
+            <br />
+          hello, world <span role="img" aria-label="metal hand emoji">🤘🏻</span>
       </h1>
         <h2 className="subtitle">
       I'm <span className="highlight">Steph</span>,

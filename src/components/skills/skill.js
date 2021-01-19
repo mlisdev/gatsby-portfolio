@@ -1,31 +1,64 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import "./skill.css"
+
 // markup
 const Skill = () => {
+  const queryData = useStaticQuery(
+    graphql`
+        query skillQuery {
+  allDatoCmsLibrarySkill(sort: {order: ASC, fields: skill}) {
+    nodes {
+      skill
+    }
+  }
+  allDatoCmsSoftwareSkill(sort: {fields: skill, order: ASC}) {
+    nodes {
+      skill
+    }
+  }
+}
+    `
+    )
+
   return (
 
-<div class="tile is-ancestor">
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-      <p class="title">Hello World</p>
-      <p class="subtitle">What is up?</p>
-    </article>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-      <p class="title">Foo</p>
-      <p class="subtitle">Bar</p>
-    </article>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-      <p class="title">Third column</p>
-      <p class="subtitle">With some content</p>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-      </div>
-    </article>
-  </div>
-</div>
+    <section className="mt-6 has-background-light" id="skills">
+      <div className="columns is-mobile is-centered">
+      <div className="column is-one-quarter">
+          <div class="box">
+            <div className="content">
+            <h4>Librarian Skills</h4>
+      {queryData.allDatoCmsLibrarySkill.nodes.map((skills) => {
+        return (
+          <ul>
+            <li>{skills.skill}</li>
+          </ul>
+        );
+      }
+      )
+        }
+          </div>
+        </div>
+        </div>
+        <div className="column is-one-quarter">
+          <div class="box">
+            <p class="content">
+            <h4>Software Engineer Skills</h4>
+      {queryData.allDatoCmsSoftwareSkill.nodes.map((skills) => {
+        return (
+          <ul>
+            <li>{skills.skill}</li>
+          </ul>
+        );
+      }
+      )
+              }
+              </p>
+        </div>
+        </div>
+        </div>
+      </section>
 
   )
 }

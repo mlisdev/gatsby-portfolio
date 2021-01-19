@@ -26,8 +26,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $crimson;
   font-weight: normal;
 }
+
 $title-size: 3rem; 
 $subtitle-size: 2rem; 
+$content-heading-color: $blue; 
 
 // change default variables 
 // navbar 
@@ -38,6 +40,8 @@ $navbar-height: 1.5rem;
 
 // hero 
 $hero-body-padding-medium: 8rem; 
+
+
 
 
 @import "~bulma/bulma.sass";
