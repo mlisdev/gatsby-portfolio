@@ -37,7 +37,7 @@ export default function Layout({ children }) {
                 <a href="#about" className="navbar-item">About</a>
                 <a href="#skills" className="navbar-item">Skills</a>
                 <a href="#projects" className="navbar-item">Projects</a>
-                <a href="#resume" className="navbar-item">Resume</a>
+                {/* <a href="#resume" className="navbar-item">Resume</a> */}
                   <a href="http://rinehart.codes" className="navbar-item">Blog</a>
             </div>
             </div>

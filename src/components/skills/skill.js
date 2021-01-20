@@ -19,6 +19,12 @@ const Skill = () => {
       id
     }
   }
+  allDatoCmsHobbyList(sort: {fields: hobby, order: ASC})  {
+    nodes {
+      hobby
+      id
+    }
+  }
 }
     `
     )
@@ -26,11 +32,12 @@ const Skill = () => {
   return (
 
     <section className="mt-6 has-background-light" id="skills">
-      <div className="columns is-mobile is-centered">
-      <div className="column is-one-quarter">
+      <h3 className="title is-3 titletext">Skills</h3>
+      <div className="columns is-desktop is-centered">
+      <div className="column is-3">
           <div className="box">
             <div className="content">
-            <h4>Librarian Skills</h4>
+            <h4>Library Skills</h4>
       {queryData.allDatoCmsLibrarySkill.nodes.map((skills) => {
         return (
           <ul key={skills.id}>
@@ -43,14 +50,30 @@ const Skill = () => {
           </div>
         </div>
         </div>
-        <div className="column is-one-quarter">
+        <div className="column is-3">
           <div className="box">
             <div className="content">
-            <h4>Software Engineer Skills</h4>
-      {queryData.allDatoCmsSoftwareSkill.nodes.map((skills) => {
+            <h4>Dev Skills</h4>
+              {queryData.allDatoCmsSoftwareSkill.nodes.map((skills) => {
+                return (
+                  <ul key={skills.id}>
+                    <li>{skills.skill}</li>
+                  </ul>
+                );
+              }
+              )
+              }
+            </div>
+          </div>
+          </div>
+        <div className="column is-3">
+          <div className="box">
+            <div className="content">
+            <h4>Hobbies</h4>
+      {queryData.allDatoCmsHobbyList.nodes.map((hobbies) => {
         return (
-          <ul key={skills.id}>
-            <li>{skills.skill}</li>
+          <ul key={hobbies.id}>
+            <li>{hobbies.hobby}</li>
           </ul>
         );
       }

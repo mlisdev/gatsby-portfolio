@@ -5,7 +5,7 @@ import Steph from "../../images/steph.png"
 const About = () => {
     return (
   <section id="about">
-      <div className="columns mt-4 is-mobile is-vcentered is-centered">
+        <div className="columns mt-4 is-mobile is-vcentered is-centered">
         <div className="column is-one-quarter">
           <center>
             <img src={Steph} alt="site author, girl with pink hair holding a coffee cup" />
