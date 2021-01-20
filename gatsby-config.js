@@ -2,8 +2,12 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: "gatsby-portfolio",
-    siteUrl: "http://stephrinehart.com"
+    siteUrl: "http://stephrinehart.com",
+    title: "Stephanie Rinehart - Librarian & Web Developer",
+    description:
+      "I'm Stephanie, a librarian and web developer.",
+    image: "/images/steph.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@heyrinehart",
   },
   plugins: [
     {

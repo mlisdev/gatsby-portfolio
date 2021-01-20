@@ -7,22 +7,18 @@ const Project = () => {
   const queryData = useStaticQuery(
     graphql`
         query MyQuery {
-              allDatoCmsProject {
-                    nodes {
-                    entityPayload  {
-                        attributes {
-                        title
-                        img_url
-                        description
-                        technologies
-                        github_link
-                        link
-                        }
-                        id
-                    }
-            }
-        }
-        }
+            allDatoCmsProject (sort: {fields: title, order: ASC})  {
+                nodes {
+                githubLink
+                id
+                imgUrl
+                link
+                title
+                technologies
+                description
+    }
+  }
+}
 
     `
     )
@@ -34,30 +30,29 @@ const Project = () => {
       {queryData.allDatoCmsProject.nodes.map((proj) => {
         return (
           <div className="columns mt-4 mb-4 is-desktop is-centered is-vcentered projs" key={proj.id}>
-                <div classNamme="column is-4">
+                <div className="column is-4">
                     <div className="content">
-                        
-                            <h5 class="title is-5">{proj.entityPayload.attributes.title}</h5>
+                            <h5 className="title is-5">{proj.title}</h5>
                             
-                <img src={proj.entityPayload.attributes.img_url} style={{ width: 34 + `rem` }} />
+                <img src={proj.imgUrl} style={{ width: 34 + `rem` }} />
                 </div>
                 </div>
                 <div className="column is-4">
                     <div className="block">
                         <strong>Description:</strong> <br />
-                    {proj.entityPayload.attributes.description} 
+                    {proj.description} 
                     </div>
                     <div className="block">
                         <strong>Technologies used:</strong> <br />
-                    {proj.entityPayload.attributes.technologies} 
+                    {proj.technologies} 
                     </div>
                     <div className="block">
-                            <a href={proj.entityPayload.attributes.github_link} target="_blank" rel="noopener noreferrer">
+                            <a href={proj.github_link} target="_blank" rel="noopener noreferrer">
                         <GithubLogo color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
                         <span>Github</span>
                     </a>
                     &nbsp; &nbsp; &nbsp; 
-                            <a href={proj.entityPayload.attributes.link} target="_blank" rel="noopener noreferrer">
+                            <a href={proj.link} target="_blank" rel="noopener noreferrer">
                         <Link color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
                         <span>Deployed app</span>
                         </a>

@@ -13,6 +13,7 @@ $slate: #171635;
 $orange: #CA7508; 
 $white: #fff; 
 
+
 // set brand font 
 $sans-serif: "Jost", sans-serif; 
 $family-monospace: "Coda", monospace; 
@@ -26,6 +27,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $crimson;
   font-weight: normal;
 }
+
+$footer-padding: 2rem 1.5rem 4rem;
 
 $title-size: 3rem; 
 $subtitle-size: 2rem; 
