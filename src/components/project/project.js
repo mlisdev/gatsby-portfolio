@@ -39,22 +39,19 @@ const Project = () => {
                         
                             <h5 class="title is-5">{proj.entityPayload.attributes.title}</h5>
                             
-                <img src={proj.entityPayload.attributes.img_url} style={{ width: 32 + `rem` }} />
+                <img src={proj.entityPayload.attributes.img_url} style={{ width: 34 + `rem` }} />
                 </div>
                 </div>
                 <div className="column is-4">
-                    <block>
+                    <div className="block">
                         <strong>Description:</strong> <br />
                     {proj.entityPayload.attributes.description} 
-                    </block>
-                    <br />
-                    <br />
-                    <block>
+                    </div>
+                    <div className="block">
                         <strong>Technologies used:</strong> <br />
                     {proj.entityPayload.attributes.technologies} 
-                    </block>
-                    <br />
-                    <br />
+                    </div>
+                    <div className="block">
                             <a href={proj.entityPayload.attributes.github_link} target="_blank" rel="noopener noreferrer">
                         <GithubLogo color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
                         <span>Github</span>
@@ -63,10 +60,11 @@ const Project = () => {
                             <a href={proj.entityPayload.attributes.link} target="_blank" rel="noopener noreferrer">
                         <Link color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
                         <span>Deployed app</span>
-                            </a>
-                      <hr />
+                        </a>
+                        </div>
+                    <hr />
+                    </div>
                 </div>
-                  </div>
                   
         );
       }

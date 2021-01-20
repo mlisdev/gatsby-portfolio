@@ -1,5 +1,6 @@
-import * as React from "react"
-import Steph from "../../images/steph.png"
+import * as React from "react";
+import Steph from "../../images/steph.png";
+import { UserSquare } from "phosphor-react";
 
 // markup
 const About = () => {
@@ -30,6 +31,12 @@ const About = () => {
               <div className="block">
                 I believe front end web design should be ADA accessible, crisp, and clear.
                 Back end web development should be secure, easy to navigate, and designed to improve the user experience.
+                <br />
+                <a href="https://tinyurl.com/stephrinehart" target="_blank" rel="noopener noreferrer">
+                        <UserSquare color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
+                        <span>Here's my resume!</span>
+                    </a>
+
                  </div>
             </div>
   </div>

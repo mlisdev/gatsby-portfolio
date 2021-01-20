@@ -1,7 +1,7 @@
 import React from "react";
 import './mystyles.scss';
 import './layout.css';
-import { GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from "phosphor-react";
+import { GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo, At, Headphones } from "phosphor-react";
 
 export default function Layout({ children }) {
    const [isActive, setisActive] = React.useState(false);
@@ -44,14 +44,18 @@ export default function Layout({ children }) {
               <div className="navbar-end is-spaced">
                 <div className="navbar-item">
                   <a href="http://github.com/mlisdev" target="_blank" rel="noopener noreferrer"><GithubLogo color="#763262" weight="duotone" size={32} aria-label="github logo" /></a>
-                  &nbsp; | &nbsp; 
+                  &nbsp; &nbsp; 
                   <a href="http://linkedin.com/in/srinehart" target="_blank" rel="noopener noreferrer" ><LinkedinLogo color="#763262" weight="duotone" size={32} aria-label="Linkedin logo" /></a>
-                  &nbsp; | &nbsp; 
+                  &nbsp; &nbsp; 
         
                   <a href="http://instagram.com/heyrinehart" target="_blank" rel="noopener noreferrer" ><InstagramLogo color="#763262" weight="duotone" size={32} aria-label="Instagram logo" /></a>
-                  &nbsp; | &nbsp; 
+                  &nbsp; &nbsp; 
                    
                   <a href="http://twitter.com/heyrinehart" target="_blank" rel="noopener noreferrer"><TwitterLogo color="#763262" weight="duotone" size={32} aria-label="Twitter logo" /></a>
+                  &nbsp; &nbsp; 
+                  <a href="mailto:hey@stephrinehart.com" target="_blank" rel="noopener noreferrer"><At color="#763262" weight="duotone" size={32} aria-label="At symbol for email" /></a>
+                  &nbsp; &nbsp; 
+                  <a href="https://open.spotify.com/user/rinehart?si=6EUUv_iYQgmJnegkLyocAg" target="_blank" rel="noopener noreferrer"><Headphones color="#763262" weight="duotone" size={32} aria-label="At symbol for email" /></a>
                   </div>
             </div>
 </div>
