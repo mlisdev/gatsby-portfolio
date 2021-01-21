@@ -2,11 +2,27 @@ import React from "react";
 import './mystyles.scss';
 import './layout.css';
 import { GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo, At, Headphones } from "phosphor-react";
+import { Helmet } from "react-helmet";
 
-export default function Layout({ children }) {
+export default function Layout({ pageMeta, children }) {
    const [isActive, setisActive] = React.useState(false);
 
-    return (
+  return (
+          <div className="application">
+      <Helmet>
+      <title>{`Stephanie Rinehart | ${pageMeta.title}`}</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Stephanie Rinehart" />
+        <meta property="og:title" content="Stephanie Rinehart | Librarian & Web Developer" />
+        <meta property="og:description" content={pageMeta.description} />
+        <meta property="og:image" content="http://stephrinehart.com/keepthis/social.png" />
+        <meta property="og:url" content="http://stephrinehart.com" />
+        <meta name="twitter:creator" content="@heyrinehart" />
+        <meta name="description" content={pageMeta.description} />
+        <meta name="keywords" content={pageMeta.keywords.join(',')} />
+          
+      </Helmet>
       <container>
         <section id="home">
           
@@ -78,19 +94,20 @@ export default function Layout({ children }) {
                 How do you copyright something? Do I just go "copyright Stephanie Rinehart"? Because.. that.
                 </div> 
               <div class="block">
-                Website built with <a href="http://bulma.io" target="_blank" rel="noopener noreferrer" >Bulma</a>, <a href="http://gatsbyjs.com" target="_blank" rel="noopener noresferrer">GatsbyJS</a>, and <a href="http://datocms.com" target="_blank" rel="noopener noreferrer">DatoCMS</a><br />. 
-                Icons from <a href="https://phosphoricons.com/" target="_blank" rel="noopener noreferrer" >Phosphoricons</a>. <br /> 
-                Logo by <a href="https://evanayres.netlify.app/" target="_blank" rel="noopener noreferrer" >Evan Ayres</a>. <br /> 
+                Website built with <a href="http://bulma.io" target="_blank" rel="noreferrer" >Bulma</a>, <a href="http://gatsbyjs.com" target="_blank" rel="noreferrer">GatsbyJS</a>, and <a href="http://datocms.com" target="_blank" rel="noreferrer">DatoCMS</a><br />. 
+                Icons from <a href="https://phosphoricons.com/" target="_blank" rel="noreferrer" >Phosphoricons</a>. <br /> 
+                Logo by <a href="https://evanayres.weebly.com/" target="_blank" rel="noreferrer" >Evan Ayres</a>. <br /> 
                 </div> 
               <div class="block">
-                🏳️‍🌈 🏳️‍🌈 🏳️‍🌈
+                <span role="img" aria-label="pride flag emoji">🏳️‍🌈 🏳️‍🌈 🏳️‍🌈</span>
                 </div> 
 
     </p>
   </div>
 </footer>
 
-        </container>
+      </container>
+      </div>
 
   )
 }

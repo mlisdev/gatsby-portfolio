@@ -16,6 +16,8 @@ const Project = () => {
                 title
                 technologies
                 description
+                imgAlt
+                
     }
   }
 }
@@ -29,12 +31,12 @@ const Project = () => {
           <h3 className="title is-3 titletext">Projects</h3>
       {queryData.allDatoCmsProject.nodes.map((proj) => {
         return (
-          <div className="columns mt-4 mb-4 is-desktop is-centered is-vcentered projs" key={proj.id}>
+          <div className="columns mt-4 mb-4 is-desktop is-centered is-vcentered projs" >
                 <div className="column is-4">
                     <div className="content">
-                            <h5 className="title is-5">{proj.title}</h5>
+                            <h5 className="title is-5" key={proj.id}>{proj.title}</h5>
                             
-                <img src={proj.imgUrl} style={{ width: 34 + `rem` }} />
+                <img src={proj.imgUrl} style={{ width: 34 + `rem` }} alt={proj.imgAlt} />
                 </div>
                 </div>
                 <div className="column is-4">
