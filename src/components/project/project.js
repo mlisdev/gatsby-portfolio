@@ -49,7 +49,7 @@ const Project = () => {
                     {proj.technologies} 
                     </div>
                     <div className="block">
-                            <a href={proj.github_link} target="_blank" rel="noopener noreferrer">
+                            <a href={proj.githubLink} target="_blank" rel="noopener noreferrer">
                         <GithubLogo color="#763262" weight="duotone" size={20} aria-label="Web browser icon" className="icon"/>
                         <span>Github</span>
                     </a>

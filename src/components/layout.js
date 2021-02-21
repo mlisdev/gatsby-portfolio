@@ -21,7 +21,7 @@ export default function Layout({ pageMeta, children }) {
         <meta name="twitter:creator" content="@heyrinehart" />
         <meta name="description" content={pageMeta.description} />
         <meta name="keywords" content={pageMeta.keywords.join(',')} />
-          
+        
       </Helmet>
       <container>
         <section id="home">

@@ -5,7 +5,7 @@ import { UserSquare } from "phosphor-react";
 // markup
 const About = () => {
     return (
-  <section id="about">
+  <section id="about" >
         <div className="columns mt-4 is-mobile is-vcentered is-centered">
         <div className="column is-one-quarter">
           <center>
