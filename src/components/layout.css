@@ -6,10 +6,21 @@
 
 body,
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  margin-top: 50px;
   background-color: #fff;
   color: #000;
+}
+
+.navbar ul, li { 
+  list-style: none;
+  display: inline-flex
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #CA7508;
+    margin: 1em 0; padding: 0; }
+
+.icon {
+  position: relative;
+  top: 6px;
 }
 
