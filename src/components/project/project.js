@@ -1,26 +1,31 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GithubLogo, Link } from "phosphor-react";
+import { StructuredText } from "react-datocms";
+import './project.css'; 
 
 // markup
 const Project = () => {
   const queryData = useStaticQuery(
     graphql`
-        query MyQuery {
-            allDatoCmsProject (sort: {fields: title, order: ASC})  {
-                nodes {
-                githubLink
-                id
-                imgUrl
-                link
-                title
-                technologies
-                description
-                imgAlt
-                
+    query MyQuery {
+      allDatoCmsProject(sort: {fields: title, order: ASC}) {
+        nodes {
+          githubLink
+          id
+          imgUrl
+          link
+          title
+          technologies
+          imgAlt
+          descriptionNode {
+            internal {
+              content
+            }
+          }
+        }
+      }
     }
-  }
-}
 
     `
     )
@@ -36,13 +41,14 @@ const Project = () => {
                     <div className="content">
                             <h5 className="title is-5" key={proj.id}>{proj.title}</h5>
                             
-                <img src={proj.imgUrl} style={{ width: 34 + `rem` }} alt={proj.imgAlt} />
+                <img className="projimg" src={proj.imgUrl} style={{ width: 34 + `rem` }} alt={proj.imgAlt} />
                 </div>
                 </div>
                 <div className="column is-4">
                     <div className="block">
                         <strong>Description:</strong> <br />
-                    {proj.description} 
+                {/* {proj.description}  */}
+                <StructuredText data={proj.descriptionNode.internal.content} />
                     </div>
                     <div className="block">
                         <strong>Technologies used:</strong> <br />

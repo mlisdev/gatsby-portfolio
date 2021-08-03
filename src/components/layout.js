@@ -94,7 +94,7 @@ export default function Layout({ pageMeta, children }) {
                 How do you copyright something? Do I just go "copyright Stephanie Rinehart"? Because.. that.
                 </div> 
               <div class="block">
-                Website built with <a href="http://bulma.io" target="_blank" rel="noreferrer" >Bulma</a>, <a href="http://gatsbyjs.com" target="_blank" rel="noreferrer">GatsbyJS</a>, and <a href="http://datocms.com" target="_blank" rel="noreferrer">DatoCMS</a><br />. 
+                Website built with <a href="http://bulma.io" target="_blank" rel="noreferrer" >Bulma</a>, <a href="http://gatsbyjs.com" target="_blank" rel="noreferrer">GatsbyJS</a>, and <a href="http://datocms.com" target="_blank" rel="noreferrer">DatoCMS</a>.<br /> 
                 Icons from <a href="https://phosphoricons.com/" target="_blank" rel="noreferrer" >Phosphoricons</a>. <br /> 
                 Logo by <a href="https://evanayres.weebly.com/" target="_blank" rel="noreferrer" >Evan Ayres</a>. <br /> 
                 </div> 
