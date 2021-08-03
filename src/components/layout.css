@@ -10,7 +10,7 @@ html {
   color: #000;
 }
 
-.navbar ul, li { 
+.navbar ul li { 
   list-style: none;
   display: inline-flex
 }

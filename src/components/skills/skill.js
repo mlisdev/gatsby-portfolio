@@ -34,22 +34,6 @@ const Skill = () => {
     <section className="mt-6 has-background-light" id="skills">
       <h3 className="title is-3 titletext">Skills</h3>
       <div className="columns is-desktop is-centered">
-      <div className="column is-3">
-          <div className="box">
-            <div className="content">
-            <h4>Library Skills</h4>
-      {queryData.allDatoCmsLibrarySkill.nodes.map((skills) => {
-        return (
-          <ul key={skills.id}>
-            <li>{skills.skill}</li>
-          </ul>
-        );
-      }
-      )
-        }
-          </div>
-        </div>
-        </div>
         <div className="column is-3">
           <div className="box">
             <div className="content">
@@ -66,6 +50,22 @@ const Skill = () => {
             </div>
           </div>
           </div>
+      <div className="column is-3">
+          <div className="box">
+            <div className="content">
+            <h4>Library Skills</h4>
+      {queryData.allDatoCmsLibrarySkill.nodes.map((skills) => {
+        return (
+          <ul key={skills.id}>
+            <li>{skills.skill}</li>
+          </ul>
+        );
+      }
+      )
+        }
+          </div>
+        </div>
+        </div>
         <div className="column is-3">
           <div className="box">
             <div className="content">
