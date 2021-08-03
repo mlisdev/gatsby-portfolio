@@ -8,27 +8,24 @@ import './project.css';
 const Project = () => {
   const queryData = useStaticQuery(
     graphql`
-    query MyQuery {
-      allDatoCmsProject(sort: {fields: title, order: ASC}) {
+      query MyQuery {
+      allDatoCmsProject {
         nodes {
+          description
           githubLink
           id
+          imgAlt
           imgUrl
           link
-          title
           technologies
-          imgAlt
-          descriptionNode {
-            internal {
-              content
-            }
-          }
+          title
         }
       }
     }
 
     `
-    )
+  )
+  
 
   return (
 
@@ -47,8 +44,8 @@ const Project = () => {
                 <div className="column is-4">
                     <div className="block">
                         <strong>Description:</strong> <br />
-                {/* {proj.description}  */}
-                <StructuredText data={proj.descriptionNode.internal.content} />
+                {proj.description}
+              
                     </div>
                     <div className="block">
                         <strong>Technologies used:</strong> <br />
